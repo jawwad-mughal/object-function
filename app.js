@@ -470,9 +470,9 @@ let mobiles = {
         operatingSystem: "Android 14",
   
         // Additional Specs (Optional)
-        fingerprintSensor: true,
+        fingerprintSensor: 'true',
         waterResistance: "IP68",
-        expandableStorage: false,
+        expandableStorage: 'false',
       },
       samsung_Galaxy_S51: {
         brand: "Samsung",
@@ -507,9 +507,9 @@ let mobiles = {
         operatingSystem: "Android 11",
   
         // Additional Specs (Optional)
-        fingerprintSensor: true,
+        fingerprintSensor: 'true',
         waterResistance: "IP68",
-        expandableStorage: false,
+        expandableStorage: 'false',
       },
       samsung_Galaxy_Prime: {
         brand: "Samsung",
@@ -544,9 +544,9 @@ let mobiles = {
         operatingSystem: "Android 13",
   
         // Additional Specs (Optional)
-        fingerprintSensor: true,
+        fingerprintSensor: 'true',
         waterResistance: "IP68",
-        expandableStorage: false,
+        expandableStorage: 'false',
       },
       samsung_Galaxy_S46: {
         brand: "Samsung",
@@ -581,9 +581,9 @@ let mobiles = {
         operatingSystem: "Android 14",
   
         // Additional Specs (Optional)
-        fingerprintSensor: true,
+        fingerprintSensor: 'true',
         waterResistance: "IP68",
-        expandableStorage: false,
+        expandableStorage: 'false',
       },
       samsung_Galaxy_S77: {
         brand: "Samsung",
@@ -618,16 +618,16 @@ let mobiles = {
         operatingSystem: "Android 14",
   
         // Additional Specs (Optional)
-        fingerprintSensor: true,
+        fingerprintSensor: 'true',
         waterResistance: "IP68",
-        expandableStorage: true,
+        expandableStorage: 'true',
       },
     },
   };
 
   let modelName = mobiles['realme']['realmi9i']
   console.log(modelName)
-  
+
 function objectValue(model) {
 
   let keys = [];
@@ -639,15 +639,15 @@ function objectValue(model) {
   }
 
   for (let key in model) {
-    let subValue = objectValue(model[key]);
-    if (isNaN(parseInt(key))) {
-        keys.push(`${key}: ${subValue}`); 
-    } 
+    let subValue = objectValue(model[key])
+
+    keys.push(`${key}: ${subValue}`); 
+    
   }
 
   return keys; 
 }
-  let a = objectValue(mobiles['samsung'])
+  let a = objectValue(mobiles['realme']['realmiC53'])
   console.log(a)
   
 
