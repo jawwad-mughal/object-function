@@ -626,8 +626,8 @@ let mobiles = {
   };
 
   let modelName = mobiles['realme']['realmi9i']
-
   console.log(modelName)
+  
 function objectValue(model) {
 
   let keys = [];
