@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Brand and Model Filter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-[700px]">
+        <h1 class="text-2xl font-bold mb-4 text-center">Mobile Filter App</h1>
+        <div class="main">
+        <div class="box1 flex justify-between">
+            <div class="mb-4">
+                <label for="brand" class="block text-sm font-medium text-gray-700">Select Brand</label>
+                <select id="brand" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                    <option disabled selected >Select a brand</option>
+                    
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="model" class="block text-sm font-medium text-gray-700">Select Model</label>
+                <select id="model" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" >
+                    <option  selected>Select a model</option>
+                </select>
+            </div>
+        </div>
+        <button id="searchBtn" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600" >Search</button>
+        <div class="box2 max-w-full px-6 mt-5  ">
+            
+            <div id="result" class="flex justify-center bg-blue-500">
+                 <img id="image" class="w-[250px] h-[300px] bg-gray-500 rounded-[10px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRujJlZKVF1G_-DbdJoDExdiNvFH2g82BuqEzxtiFSztxI-xOIbkx3M706Iyb48mP-6bjo&usqp=CAU" alt="">
+                </div>
+                <div id="description" class="mt-5">
+                    <h1 id="heading" class="text-[30px]
+                     font-bold"></h1>
+                     <div id="innertext"></div>
+                </div>
+
+        </div>
+        </div>
+    </div>
+
+    <script src="mobile_app.js"></script>
+</body>
+</html>
