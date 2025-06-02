@@ -629,25 +629,31 @@ let mobiles = {
   console.log(modelName)
 
 function objectValue(model) {
-
   let keys = [];
 
-  if (typeof model !== 'object' || model === null) {
-    if (typeof model === 'string' || typeof model === 'number') {
-      return `${model}`; 
+
+  if (model === null || typeof model !== 'object') {
+    return String(model); 
+  }
+
+  
+  if (Array.isArray(model)) {
+    model.forEach((item, index) => {
+      let subValue = objectValue(item); 
+      keys.push(` ${subValue}`);
+    });
+  } else {
+    for (let key in model) {
+      if (model.hasOwnProperty(key)) {
+        let subValue = objectValue(model[key]);
+        keys.push(`${key}: ${subValue}`);
+      }
     }
   }
 
-  for (let key in model) {
-    let subValue = objectValue(model[key])
-
-    keys.push(`${key}: ${subValue}`); 
-    
-  }
-
-  return keys; 
+  return keys;
 }
-  let a = objectValue(mobiles['realme']['realmiC53'])
+  let a = objectValue(mobiles['samsung']['samsung_Galaxy_S24'])
   console.log(a)
   
 
