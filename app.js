@@ -625,8 +625,11 @@ let mobiles = {
     },
   };
 
-  let modelName = mobiles['realme']['realmi9i']
+  let modelName = mobiles['samsung']['samsung_Galaxy_S24']
   console.log(modelName)
+
+
+  
 
 function objectValue(model) {
   let keys = [];
@@ -653,8 +656,12 @@ function objectValue(model) {
 
   return keys;
 }
-  let a = objectValue(mobiles['samsung']['samsung_Galaxy_S24'])
+  let a = objectValue(modelName)
   console.log(a)
+  a.forEach((e) => {
+    document.writeln(`<h3>${e} <h3/>`)
+  })
+  
   
 
 
